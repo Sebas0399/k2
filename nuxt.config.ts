@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import Material from '@primeuix/themes/material';
+import { esES } from '@clerk/localizations'
+import { dark } from '@clerk/themes'
 
 export default defineNuxtConfig({
   runtimeConfig: {
@@ -19,8 +21,17 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxtjs/tailwindcss',
     '@primevue/nuxt-module',
+    '@clerk/nuxt'
 
   ],
+  clerk: {
+    localization: esES,
+    skipServerMiddleware: true,
+    appearance: {
+      baseTheme: dark,
+    }
+
+  },
   primevue: {
     components: {
       include: '*'

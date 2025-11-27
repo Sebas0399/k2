@@ -1,0 +1,7 @@
+ignoredBuiltDependencies:
+  - '@clerk/shared'
+  - '@parcel/watcher'
+  - esbuild
+  - unrs-resolver
+onlyBuiltDependencies:
+  - better-sqlite3
